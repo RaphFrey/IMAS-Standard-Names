@@ -86,6 +86,7 @@ standard_name_agent = Agent[None, list[StandardName]](
     toolsets=SERVERS,
     system_prompt=GENERATE_SYSTEM_PROMPT,
 )
+standard_name_agent.set_mcp_sampling_model()
 
 ai_review_agent = Agent[None, list[Review]](
     model=build_default_model(),
@@ -93,6 +94,7 @@ ai_review_agent = Agent[None, list[Review]](
     toolsets=SERVERS,
     system_prompt=REVIEW_SYSTEM_PROMPT,
 )  # type: ignore
+ai_review_agent.set_mcp_sampling_model()
 
 
 def build_regenerate_query(reviews: list[tuple[StandardName | None, Review]]) -> str:

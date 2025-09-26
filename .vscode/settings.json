@@ -49,10 +49,7 @@
   ],
   // --- Chat MCP sampling (project tool integration) --------------------
   "chat.mcp.serverSampling": {
-    "imas-standard-names/.vscode/mcp.json: imas": {
-      "allowedModels": [
-        "copilot/gpt-5"
-      ],
+    "IMAS-Standard-Names/.vscode/mcp.json: imas-sse": {
       "allowedDuringChat": true
     }
   }
